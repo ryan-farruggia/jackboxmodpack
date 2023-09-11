@@ -72,7 +72,7 @@
 
 .image-bubble {
   position: absolute;
-  bottom: -50px;
+  bottom: -80px;
   animation: riseAndRotate 5s infinite;
   z-index: 0;
 }

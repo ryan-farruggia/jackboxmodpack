@@ -11,9 +11,9 @@ interface NotAvailableProps {
 
 const NotAvailable: React.FC<NotAvailableProps> = ({ text, styles }) => {
   return (
-    <div style={{alignItems: 'center', ...styles}}>
-        <FontAwesomeIcon icon={faInfoCircle} color='white' style={{fontSize: '20px'}}/>
-        <Description text={text} styles={{textAlign: 'center', margin: '0 0 0 10px'}} />
+    <div style={{alignItems: 'center', flexDirection: 'column', width: '100%', justifyContent: 'center', ...styles}}>
+        <Description text='¯\_(ツ)_/¯' styles={{color: 'white', fontSize: '30px', margin: '0 0 10px 0'}}/>
+        <Description text={text} styles={{textAlign: 'center', color: 'white', margin: '0 0 0 10px'}} />
     </div>
   );
 }

@@ -1,0 +1,38 @@
+button {
+    background: transparent;
+    border: 2px solid dodgerblue;
+    padding: 10px;
+    color: white;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button:hover {
+    background: dodgerblue;
+    transition: 0.2s;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+    margin-top: 10px;
+  }
+  
+  .fadeOut {
+    opacity: 0;
+  }
+  

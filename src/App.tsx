@@ -3,9 +3,13 @@ import { BrowserRouter as Router, Route, Link, Routes, useLocation } from "react
 import ImageLink from './components/ImageLink';
 import LargeTitle from './components/Titles';
 import Description from './components/Description';
-import { Pack1, Pack2, Pack3, Pack4, Pack5, Pack6, Pack7, Pack8, Pack9, Pack10, Pack1FibbageXL, Pack1Lieswatter, Pack1Wordspud, Pack1YDKJ, Pack1Drawful, Pack2Bidiots, Pack2Bombcorp, Pack2Earwax, Pack2Fibbage2, Pack2QuiplashXL } from './components/Packs';
+import { Pack1, Pack3, Pack4, Pack5, Pack6, Pack7, Pack8, Pack9, Pack10, Pack1FibbageXL, Pack1Lieswatter, Pack1Wordspud, Pack1YDKJ, Pack1Drawful } from './components/Packs';
+import Pack2 from './components/Packs/Pack2';
+import { Pack2Bidiots, Pack2Bombcorp, Pack2Earwax, Pack2Fibbage2, Pack2QuiplashXL } from './components/Packs/Pack2';
 import { useTransition, animated } from 'react-spring';
-import { CSSProperties } from 'react';
+import { CSSProperties, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 interface MainContentProps {
   styles?: CSSProperties;
@@ -91,14 +95,15 @@ const MainContent: React.FC<MainContentProps> = ({ styles }) => {
           <ImageLink to='/pack10' src='pack10.png' />
         </div>
         <footer style={{position: 'fixed', bottom: 0, backgroundColor: '#1C212C', width: '100%', alignItems: 'center', display: 'flex', justifyContent: 'center'}}>
-          <p style={{color: 'white', fontFamily: 'Roboto', fontSize: '16px'}}><b style={{color:'red'}}>♥</b> Buy us a coffee</p>
+          <FontAwesomeIcon icon={faHeart} color='red' fontSize={'12px'} />
+          <p style={{color: 'white', fontFamily: 'Roboto', fontSize: '12px', margin: '0 0 0 8px', padding: '10px 0px'}}>Buy us a coffee</p>
         </footer>
       </div>
     );
   }
 
   return transitions((style: any, item) => (
-    <animated.div style={style}>
+    <animated.div style={{...style}}>
       <Routes location={item}>
         <Route path="/pack1" element={<Pack1 />} />
         <Route path="/pack1/drawful" element={<Pack1Drawful />} />
@@ -127,9 +132,7 @@ const MainContent: React.FC<MainContentProps> = ({ styles }) => {
   ));
 }
 
-
-function App() {
-
+const App: React.FC = () => {  
   return (
     <Router>
       <div className="App">

@@ -1,12 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import BackButton from './BackButton';
+import React, { useEffect, useState } from 'react';
 import PageHeader from './PageHeader';
 import ImageLink from './ImageLink';
 import '../App.css';
-import { MediumTitle, SmallTitle } from './Titles';
+import { MediumTitle } from './Titles';
 import NotAvailable from './NotAvailable';
-import { Outlet } from "react-router-dom";
 
 interface PackProps {
 }
@@ -39,7 +36,7 @@ const Pack1Drawful: React.FC<PackSubProps> = ({  }) => {
   return (
     <div style={{padding: '15px', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
       <PageHeader text='Jackbox Party Pack 1 > Drawful' styles={{width: '100%'}} />
-      
+      <NotAvailable text="Couldn't find any mods for this game." styles={{marginTop: '200px'}} />
     </div>
   );
 }
@@ -48,7 +45,7 @@ const Pack1FibbageXL: React.FC<PackSubProps> = ({  }) => {
   return (
     <div style={{padding: '15px', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
       <PageHeader text='Jackbox Party Pack 1 > FibbageXL' styles={{width: '100%'}} />
-      
+      <NotAvailable text="Couldn't find any mods for this game." styles={{marginTop: '200px'}} />
     </div>
   );
 }
@@ -57,7 +54,7 @@ const Pack1Lieswatter: React.FC<PackSubProps> = ({  }) => {
   return (
     <div style={{padding: '15px', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
       <PageHeader text='Jackbox Party Pack 1 > Lie Swatter' styles={{width: '100%'}} />
-      
+      <NotAvailable text="Couldn't find any mods for this game." styles={{marginTop: '200px'}} />
     </div>
   );
 }
@@ -66,7 +63,7 @@ const Pack1Wordspud: React.FC<PackSubProps> = ({  }) => {
   return (
     <div style={{padding: '15px', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
       <PageHeader text='Jackbox Party Pack 1 > Word Spud' styles={{width: '100%'}} />
-      
+      <NotAvailable text="Couldn't find any mods for this game." styles={{marginTop: '200px'}} />
     </div>
   );
 }
@@ -75,75 +72,12 @@ const Pack1YDKJ: React.FC<PackSubProps> = ({  }) => {
   return (
     <div style={{padding: '15px', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
       <PageHeader text="Jackbox Party Pack 1 > You Don't Know Jack" styles={{width: '100%'}} />
-      
+      <NotAvailable text="Couldn't find any mods for this game." styles={{marginTop: '200px'}} />
     </div>
   );
 }
 
-const Pack2: React.FC<PackProps> = ({  }) => {
-    return (
-    <div style={{padding: '15px', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
-      <PageHeader text='Jackbox Party Pack 2' styles={{width: '100%'}} />
-      <div style={{alignItems: 'center', flexDirection: 'column', justifyContent: 'center', width: '100%'}}>
-        <MediumTitle text='Choose a game to modify.' />
-        <div style={{justifyContent: 'space-evenly', width: '100%', marginBottom: '50px'}}>
-          <ImageLink to='bidiots' src='./pack2/bidiots.png' />
-          <ImageLink to='earwax' src='./pack2/earwax.png' />
-          <ImageLink to='bombcorp' src='./pack2/bombcorp.png' />
-        </div>
-        <div style={{justifyContent: 'space-evenly', width: '100%', marginBottom: '50px'}}>
-          <ImageLink to='fibbage2' src='./pack2/fibbage2.png' />
-          <ImageLink to='quiplashxl' src='./pack2/quiplashXL.png' />
-        </div>
-      </div>
-    </div>
-    );
-}
 
-const Pack2Bidiots: React.FC<PackSubProps> = ({  }) => {
-  return (
-    <div style={{padding: '15px', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
-      <PageHeader text="Jackbox Party Pack 2 > Bidiots" styles={{width: '100%'}} />
-      
-    </div>
-  );
-}
-
-const Pack2Bombcorp: React.FC<PackSubProps> = ({  }) => {
-  return (
-    <div style={{padding: '15px', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
-      <PageHeader text="Jackbox Party Pack 2 > Bombcorp" styles={{width: '100%'}} />
-      
-    </div>
-  );
-}
-
-const Pack2Earwax: React.FC<PackSubProps> = ({  }) => {
-  return (
-    <div style={{padding: '15px', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
-      <PageHeader text="Jackbox Party Pack 2 > Earwax" styles={{width: '100%'}} />
-      
-    </div>
-  );
-}
-
-const Pack2Fibbage2: React.FC<PackSubProps> = ({  }) => {
-  return (
-    <div style={{padding: '15px', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
-      <PageHeader text="Jackbox Party Pack 2 > Fibbage 2" styles={{width: '100%'}} />
-      
-    </div>
-  );
-}
-
-const Pack2QuiplashXL: React.FC<PackSubProps> = ({  }) => {
-  return (
-    <div style={{padding: '15px', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
-      <PageHeader text="Jackbox Party Pack 2 > Quiplash XL" styles={{width: '100%'}} />
-      
-    </div>
-  );
-}
 
 const Pack3: React.FC<PackProps> = ({  }) => {
     return (
@@ -294,7 +228,6 @@ const Pack10: React.FC<PackProps> = ({  }) => {
     );
 }
 
-export { Pack1, Pack2, Pack3, Pack4, Pack5, Pack6, Pack7, Pack8, Pack9, Pack10 }
+export { Pack1, Pack3, Pack4, Pack5, Pack6, Pack7, Pack8, Pack9, Pack10 }
 export { Pack1Drawful, Pack1FibbageXL, Pack1Lieswatter, Pack1Wordspud, Pack1YDKJ }
-export { Pack2Bidiots, Pack2Bombcorp, Pack2Earwax, Pack2Fibbage2, Pack2QuiplashXL }
 export default Pack1;
