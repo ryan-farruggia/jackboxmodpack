@@ -23,8 +23,7 @@ This software is untested af 🔥
 
 ## Credits and other shit
 [@phoxwithmp7](https://github.com/phoxwithmp7) - [Earwax mod v1.0](https://github.com/PhoxWithMP7/WaxOgg)<br>
-the federal reserve for causing epic inflation<br>
-taco bell baja blast<br>
+the federal reserve<br>
+baja blast<br>
 obamna<br>
-soDA!!<br>
 i need more boolets! 🔥🥶🗣<br>
